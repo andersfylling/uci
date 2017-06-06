@@ -23,4 +23,4 @@ In case the website is down, see the description here: https://github.com/scienc
 
 ### ENGINE to GUI
 
-- [x] Nothing.
+- [x] Simple functions to send messages from ENGINE to GUI.
