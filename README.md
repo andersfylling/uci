@@ -8,8 +8,10 @@ In case the website is down, see the description here: https://github.com/scienc
 - [x] Events or UCI commands has their own `event` namespace.
 - [x] Threaded, as required.
 - [x] Unit testing.
-- [ ] CMakeList.txt that supports using this repo as a git-submodule.
-- [ ] Benchmarks.
+- [x] CMakeList.txt that supports using this repo as a git-submodule.
+- [x] Benchmarks.
+- [x] Well commented code.
+- [ ] Wiki with examples.
 
 ### GUI to ENGINE
 
