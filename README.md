@@ -11,7 +11,7 @@ In case the website is down, see the description here: https://github.com/scienc
 - [x] CMakeList.txt that supports using this repo as a git-submodule.
 - [x] Benchmarks.
 - [x] Well commented code.
-- [ ] Wiki with examples.
+- [x] Wiki with examples. But this is lacking, see also uci_code/main.cpp for more examples.
 
 ### GUI to ENGINE
 
