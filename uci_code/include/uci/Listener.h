@@ -41,4 +41,3 @@ class Listener {
   bool joinListenerAndStop();
 };
 }
-}
