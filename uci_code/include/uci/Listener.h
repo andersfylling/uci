@@ -4,8 +4,8 @@
 #include <functional>
 #include <thread>
 #include <mutex>
-#include "./Parser.h" // in cpp files use "uci/Parser.h"
-#include "./definitions.h" // in cpp files use "uci/Definitions.h"
+#include "./Parser.h" // in cpp files use "uci_protocol/Parser.h"
+#include "./definitions.h" // in cpp files use "uci_protocol/Definitions.h"
 
 namespace uci {
 class Listener {

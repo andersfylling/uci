@@ -2,13 +2,13 @@
 
 #include <vector>
 #include <map>
-#include "./definitions.h" // in cpp files use "uci/definitions.h"
+#include "./definitions.h" // in cpp files use "uci_protocol/definitions.h"
 
 namespace uci {
 class Parser {
  private:
   const std::map<std::string, std::vector<std::vector<std::string>>> commands = { // I'll fix this later
-      {"uci", {
+      {"uci_protocol", {
           {}
       }},
       {"debug", {
