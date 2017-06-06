@@ -1,3 +1,7 @@
+#pragma once
+
+#include <cstdint>
+
 namespace uci {
 
 // Different commands created by the UCI protocol
