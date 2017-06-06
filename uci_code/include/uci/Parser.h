@@ -8,7 +8,7 @@ namespace uci {
 class Parser {
  private:
   const std::map<std::string, std::vector<std::vector<std::string>>> commands = { // I'll fix this later
-      {"uci_protocol", {
+      {"uci", {
           {}
       }},
       {"debug", {
@@ -61,9 +61,15 @@ class Parser {
   Parser();
   ~Parser();
 
-  uint8_t parseInputForCommand(std::string input);
-  arguments_t parseInputForArguments(std::string input);
-  std::pair<uint8_t, arguments_t> parseInput(std::string input);
+  uint8_t                                 parseInputForCommand(std::string input);
+  ::uci::arguments_t                      parseInputForArguments(std::string input);
+  std::pair<uint8_t, ::uci::arguments_t>  parseInput(std::string input);
+
+  // extract the first word from a sentence
+  std::string getFirstWord(const std::string sentence);
+
+  // extract the first word after position
+  std::string getFirstWord(const uint8_t index, const std::string sentence);
 };
 
 }
