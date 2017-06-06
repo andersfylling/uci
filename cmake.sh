@@ -14,5 +14,5 @@ cmake ../..
 make
 
 cd bin
-chmod +x uci_tests
-./uci_tests
+chmod +x uci_code_tests
+./uci_code_tests
