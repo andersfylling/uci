@@ -1,3 +1,9 @@
+#pragma once
+
+#include <iostream>
+#include <map>
+#include <functional>
+
 namespace uci {
 
 // Holds the keys and associated values per UCI input.
