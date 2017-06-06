@@ -21,7 +21,21 @@ namespace uci {
  */
 Listener::Listener()
     : runListener(false),
-      lastID(2) {
+      lastID(2),
+      strict(false)
+{
+}
+
+/**
+ * Constructor
+ *
+ * @param strict bool Whether or not unknown commands should be ignored. strict(True) will ignore unknown commands.
+ */
+Listener::Listener(bool strict)
+    : runListener(false),
+      lastID(2),
+      strict(strict)
+{
 }
 
 /**
@@ -76,11 +90,16 @@ bool Listener::initiateListener() {
       }
 
       auto event = this->parser.parseInputForCommand(line);
-      auto args = this->parser.parseInputForArguments(line);
 
-      if (event != uci::event::NO_MATCHING_COMMAND) {
-        this->fireEvent(event, args);
+      // if strict mode is on and the command is unknown, it will be ignored.
+      if (this->strict && event == uci::event::NO_MATCHING_COMMAND) {
+        continue;
       }
+
+
+      // Get the args and fire all bond listeners.
+      auto args = this->parser.parseInputForArguments(line);
+      this->fireEvent(event, args);
     }
   });
 
