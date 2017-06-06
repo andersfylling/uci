@@ -17,11 +17,16 @@ class Listener {
   bool runListener;
   Parser parser;
 
+  // if true, every non existent command is ignored.
+  // In simple terms, when this is active it wont try to parse anything if the command does not exist.
+  bool strict;
+
   std::mutex eventsMutex;
   std::mutex eventIDsMutex;
 
  public:
   Listener();
+  Listener(bool strict);
   ~Listener();
 
   bool initiateListener();

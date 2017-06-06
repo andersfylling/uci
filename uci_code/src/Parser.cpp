@@ -1,14 +1,11 @@
+// header file
+#include "uci/Parser.h"
 
 // cpp dependencies
-#include <iostream>
-#include <vector>
-#include <map>
 #include <sstream>
 
 // local dependencies
-#include "uci/Parser.h"
 #include "uci/events.h"
-#include "uci/definitions.h"
 
 
 namespace uci {

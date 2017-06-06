@@ -1,8 +1,9 @@
-//
-// Created by anders on 6/7/17.
-//
+#pragma once
 
-#ifndef UCI_RESPONSE_H
-#define UCI_RESPONSE_H
+#include <iostream>
+#include "./definitions.h" // in cpp files use "uci/definitions.h"
 
-#endif //UCI_RESPONSE_H
+namespace uci {
+void send(std::string res);
+void send(std::string command, ::uci::arguments_t args);
+}

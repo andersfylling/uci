@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <map>
-#include "./definitions.h" // in cpp files use "uci_protocol/definitions.h"
+#include "./definitions.h" // in cpp files use "uci/definitions.h"
 
 namespace uci {
 class Parser {
