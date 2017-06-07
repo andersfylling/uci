@@ -12,6 +12,7 @@ In case the website is down, see the description here: https://github.com/scienc
 - [x] Well commented code.
 - [x] Wiki with examples. But this is lacking, see also uci_code/main.cpp for more examples.
 - [x] Forwards for different headers.
+- [x] No library requirements except a compiler and c++14.
 
 ### GUI to ENGINE
 
