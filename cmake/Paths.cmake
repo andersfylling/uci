@@ -1,5 +1,0 @@
-set(UCI_BENCHMARK_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/benchmark/include")
-set(UCI_CATCH_INCLUDE_DIR     "${CMAKE_CURRENT_SOURCE_DIR}/external/Catch/include")
-
-set(UCI_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src/include")
-set(UCI_PROJECT_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
