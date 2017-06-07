@@ -6,12 +6,12 @@ In case the website is down, see the description here: https://github.com/scienc
 
 - [x] Isolated code. Everything exists within the `uci` namespace.
 - [x] Events or UCI commands has their own `event` namespace.
-- [x] Threaded, as required.
 - [x] Unit testing.
 - [x] CMakeList.txt that supports using this repo as a git-submodule.
 - [x] Benchmarks.
 - [x] Well commented code.
 - [x] Wiki with examples. But this is lacking, see also uci_code/main.cpp for more examples.
+- [x] Forwards for different headers.
 
 ### GUI to ENGINE
 
@@ -24,3 +24,22 @@ In case the website is down, see the description here: https://github.com/scienc
 ### ENGINE to GUI
 
 - [x] Simple functions to send messages from ENGINE to GUI.
+
+
+## Using this as a git sub module
+When this repo has been added using `git submodule add https://github.com/sciencefyll/uci external/uci`,
+you need to link CMAKE to the repo and you are all set. 
+
+### Example
+```cmake
+# This lets you use clean includes: #include "uci/Listener.h"
+set(PROJECTNAME_UCI_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/uci/include")
+
+# Link the directory
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/external/uci")
+
+# And when you compile your projects sources, include uci. 
+# The uci project requires threading.
+target_link_libraries(PROJECTNAME_src uci -lpthread)
+
+```
