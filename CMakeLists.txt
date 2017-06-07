@@ -9,7 +9,13 @@ include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/Paths.cmake")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/bin)
 
 # Third party libraries in lib
-add_subdirectory(external)
+# These are ignored if this is used as a external / sub module
+if (${CMAKE_CURRENT_SOURCE_DIR} EQUAL ${CMAKE_SOURCE_DIR})
+    add_subdirectory(external)
+endif()
+
+# Header files
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
 # Our source code
 add_subdirectory(uci_code)

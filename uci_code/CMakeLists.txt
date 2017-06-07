@@ -1,4 +1,3 @@
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 include_directories(${UCI_BENCHMARK_INCLUDE_DIR})
 include_directories(${UCI_CATCH_INCLUDE_DIR})
 
