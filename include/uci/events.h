@@ -23,6 +23,8 @@ static const uint8_t GO = 80;
 static const uint8_t STOP = 90;
 static const uint8_t PONDERHIT = 100;
 static const uint8_t QUIT = 110;
+static const uint8_t BLACK = 120;
+static const uint8_t WHITE = 130;
 
 }
 }

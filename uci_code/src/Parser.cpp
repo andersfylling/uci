@@ -3,6 +3,7 @@
 
 // cpp dependencies
 #include <sstream>
+#include <algorithm>
 
 // local dependencies
 #include "uci/events.h"
@@ -53,6 +54,7 @@ std::map<std::string, std::string> Parser::parseInputForArguments(std::string in
   std::string command;
   if (this->parseInputForCommand(input) != ::uci::event::NO_MATCHING_COMMAND) {
     request >> command;
+    std::transform(command.begin(), command.end(), command.begin(), ::tolower);
   }
 
   // get arguments from argumentsStr.

@@ -100,6 +100,9 @@ bool Listener::initiateListener() {
       // Get the args and fire all bond listeners.
       auto args = this->parser.parseInputForArguments(line);
       this->fireEvent(event, args);
+
+      line = "";
+      line.clear();
     }
   });
 
@@ -166,7 +169,7 @@ void Listener::fireEvent(const uint8_t event, const arguments_t args) {
 
   for (auto &observerEntry : entry->second) {
     auto &observer = observerEntry.second;
-    observer(args);
+    observer(args); // TODO: does this need to be threaded?
   }
 }
 

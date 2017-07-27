@@ -55,6 +55,12 @@ class Parser {
       {"quit", {
           {}
       }},
+      {"black", {
+            {}
+        }},
+      {"white", {
+            {}
+        }}
   };
 
  public:
