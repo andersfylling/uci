@@ -147,6 +147,10 @@ uint8_t Parser::parseInputForCommand(std::string input) {
     event = ::uci::event::PONDERHIT;
   } else if (command == "quit") {
     event = ::uci::event::QUIT;
+  } else if (command == "black") {
+    event = ::uci::event::BLACK;
+  } else if (command == "white") {
+    event = ::uci::event::WHITE;
   }
 
   return event;
