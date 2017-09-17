@@ -127,6 +127,8 @@ uint8_t Parser::parseInputForCommand(std::string input) {
     event = ::uci::event::NO_MATCHING_COMMAND;
   } else if (command == "uci") {
     event = ::uci::event::UCI;
+  } else if (command == "perft") {
+    event = ::uci::event::PERFT;
   } else if (command == "debug") {
     event = ::uci::event::DEBUG;
   } else if (command == "isready") {
