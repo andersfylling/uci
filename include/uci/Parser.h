@@ -8,6 +8,12 @@ namespace uci {
 class Parser {
  private:
   const std::map<std::string, std::vector<std::vector<std::string>>> commands = { // I'll fix this later
+      {"perft", {
+          {"depth", "FEN"},
+          {"depth"},
+          {"FEN"},
+          {}
+      }},
       {"uci", {
           {}
       }},
