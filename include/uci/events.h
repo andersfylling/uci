@@ -12,6 +12,7 @@ static const uint8_t NO_MATCHING_COMMAND = 0;
 
 // commands issued by the UCI protocol
 static const uint8_t TEST = 5;
+static const uint8_t PERFT = 6;
 static const uint8_t UCI = 10;
 static const uint8_t DEBUG = 20;
 static const uint8_t ISREADY = 30;
